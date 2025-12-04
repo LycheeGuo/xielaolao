@@ -1,5 +1,5 @@
 ---
-title: 'Home'
+title: '谢姥姥'
 date: 2023-10-24
 type: landing
 sections:
