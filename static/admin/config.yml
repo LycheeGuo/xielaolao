@@ -22,5 +22,11 @@ collections:
       - { label: '发布日期', name: 'date', widget: 'datetime' }
       - { label: '作者', name: 'authors', widget: 'list', default: ['admin'] }
       - { label: '标签', name: 'tags', widget: 'list', required: false }
-      - { label: '封面图片', name: 'image', widget: 'image', required: false }
+      - label: '封面图片'
+        name: 'image'
+        widget: 'object'
+        required: false
+        collapsed: true
+        fields:
+          - { label: '图片说明', name: 'caption', widget: 'string', required: false }
       - { label: '内容', name: 'body', widget: 'markdown' }
