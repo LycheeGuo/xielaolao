@@ -10,7 +10,7 @@ first_name: Dongmei
 last_name: Xie
 
 # Pronouns (optional)
-pronouns: she/her
+# pronouns: she/her
 
 # Status emoji
 status:
