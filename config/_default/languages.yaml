@@ -1,25 +1,20 @@
 # Languages
-#   Create a section for each of your site's languages.
-#   Documentation: https://docs.hugoblox.com/reference/language/
+#   配置网站语言
+#   文档: https://docs.hugoblox.com/reference/language/
 
-# Default language
-#en:
-#  languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
-
-# Uncomment the lines below to configure your website in a second language.
+# 设置中文 (zh) 为该网站的语言
 zh:
   languageCode: zh-Hans
-  contentDir: content/zh
+  # 【关键修改】这里改为 content，因为您的文章都在 content 根目录下，而不是 content/zh
+  contentDir: content
   title: 谢姥姥的碎碎念
   params:
-    description: Site description in Chinese...
+    description: 这是一个关于分享的博客...
   menu:
     main:
       - name: 首页
-        url: '#about'
-        weight: 1
+        url: /
+        weight: 10
       - name: 话题
-        url: '#about'
-        weight: 1
+        url: tags/
+        weight: 20
