@@ -3,7 +3,7 @@
 title: 谢冬梅
 
 # Name pronunciation (optional)
-name_pronunciation: Xie laolao
+name_pronunciation: Xie Dongmei
 
 # Full name (for SEO)
 first_name: Dongmei
@@ -23,8 +23,8 @@ superuser: true
 role: 自由作者
 
 # Organizations/Affiliations to show in About widget
-organizations:
-  - name: 离退休人员
+# organizations:
+#  - name: 离退休人员
 
 # Short bio (displayed in user profile at end of posts)
 bio: 散文作家
