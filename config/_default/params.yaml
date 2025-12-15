@@ -281,7 +281,7 @@ hugoblox:
   # PRO
   # Pro subscription features and affiliate program
   # ────────────────────────────────────────────────────────────────────────────
-pro:
+  pro:
     # Hide "Powered by HugoBlox" attribution
     # 将 false 改为 true，这样那行“由 Hugo Blox 支持发布...”就会消失，只剩下上面设置的一行版权信息
     hide_attribution: true  # <--- 修改这里
