@@ -1,32 +1,35 @@
 backend:
   name: git-gateway
-  branch: main # 确保你的分支名是 main
+  branch: main
 
-media_folder: "static/uploads" # 图片上传位置
-public_folder: "/uploads"      # 图片引用路径
+media_folder: static/uploads
+public_folder: /uploads
 
-# 设置为中文界面（可选）
+# 界面语言设置
 locale: "zh_Hans"
 
 collections:
-  - name: "blog"
-    label: "博客文章"
-    label_singular: "文章"
-    folder: "content/blog"
+  - name: blog
+    label: 博客
+    label_singular: 博客文章
+    folder: content/blog
     create: true
-    # 路径生成规则
-    path: "{{slug}}/index"
+    # 路径生成规则：在 blog 下创建子文件夹，例如 content/blog/my-post/index.md
+    path: '{{slug}}/index'
+    # 媒体文件相对路径：图片会保存在文章同一个文件夹下
+    media_folder: ''
+    public_folder: ''
     fields:
-      - {label: "标题", name: "title", widget: "string"}
-      - {label: "摘要", name: "summary", widget: "text", required: false}
-      - {label: "发布日期", name: "date", widget: "datetime"}
-      - {label: "作者", name: "authors", widget: "list", default: ["admin"]}
-      - {label: "标签", name: "tags", widget: "list", required: false}
-      - label: "封面图片"
-        name: "image"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "图片", name: "filename", widget: "image"}
-          - {label: "说明", name: "caption", widget: "string", required: false}
-      - {label: "正文内容", name: "body", widget: "markdown"}
+      - { label: '标题', name: 'title', widget: 'string' }
+      - { label: '摘要', name: 'summary', widget: 'text', required: false }
+      - { label: '发布日期', name: 'date', widget: 'datetime' }
+      - { label: '作者', name: 'authors', widget: 'list', default: ['admin'] }
+      - { label: '标签', name: 'tags', widget: 'list', required: false }
+      
+      # --- 关键修改 ---
+      # 将之前的 object 类型改为最简单的 image 类型
+      # 这样可以避免因数据结构缺失导致的 "Cannot destructure property 'url'" 崩溃
+      - { label: '封面图片', name: 'image', widget: 'image', required: false }
+      # ----------------
+      
+      - { label: '内容', name: 'body', widget: 'markdown' }
