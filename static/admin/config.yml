@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main # 确保你的分支名是 main
+
+media_folder: "static/uploads" # 图片上传位置
+public_folder: "/uploads"      # 图片引用路径
+
+# 设置为中文界面（可选）
+locale: "zh_Hans"
+
+collections:
+  - name: "blog"
+    label: "博客文章"
+    label_singular: "文章"
+    folder: "content/blog"
+    create: true
+    # 路径生成规则
+    path: "{{slug}}/index"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "摘要", name: "summary", widget: "text", required: false}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "作者", name: "authors", widget: "list", default: ["admin"]}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - label: "封面图片"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "图片", name: "filename", widget: "image"}
+          - {label: "说明", name: "caption", widget: "string", required: false}
+      - {label: "正文内容", name: "body", widget: "markdown"}
