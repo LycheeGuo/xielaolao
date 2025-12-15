@@ -25,30 +25,13 @@ role: 自由作者
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: 离退休人员
-    url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: 散文作家
 
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-profiles:
-  - icon: at-symbol
-    url: 'mailto:your-email@example.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/BuildLore
-  - icon: brands/instagram
-    url: https://www.instagram.com/
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
-  # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
-  - icon: academicons/cv
-    url: uploads/resume.pdf
-    label: Download my resume
-  - icon: rss
-    url: ./post/index.xml
-    label: Subscribe to my blog via RSS feed
+
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
@@ -57,6 +40,4 @@ highlight_name: true
 website: ""
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include
-distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops
-self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+谢冬梅，生于1973年，湖南衡阳人。中国散文学会会员，湖南省作家协会会员，衡南县第十、十一届政协委员，现供职于衡阳市蒸湘区卫生健康局。作品入选《茅洞桥记》《莲湖湾》《相公堡》《石鼓书院的月亮》《衡阳：青春雁行如诗》《洛夫纪念文集•诗歌卷》《当代散文家美文日历（2022）》《船到衡阳柳色深——中国散文学会衡阳会员优秀作品选》等选本，出版散文集《此时，刚好》。
