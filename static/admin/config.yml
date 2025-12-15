@@ -28,5 +28,6 @@ collections:
         required: false
         collapsed: true
         fields:
+          - { label: '选择图片', name: 'filename', widget: 'image', required: false }
           - { label: '图片说明', name: 'caption', widget: 'string', required: false }
       - { label: '内容', name: 'body', widget: 'markdown' }
