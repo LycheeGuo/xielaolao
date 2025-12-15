@@ -5,8 +5,12 @@ backend:
 media_folder: static/uploads
 public_folder: /uploads
 
-# 界面语言设置
 locale: "zh_Hans"
+
+media_library:
+  name: upload
+  config:
+    multiple: true
 
 collections:
   - name: blog
@@ -14,9 +18,7 @@ collections:
     label_singular: 博客文章
     folder: content/blog
     create: true
-    # 路径生成规则：在 blog 下创建子文件夹，例如 content/blog/my-post/index.md
     path: '{{slug}}/index'
-    # 媒体文件相对路径：图片会保存在文章同一个文件夹下
     media_folder: ''
     public_folder: ''
     fields:
@@ -25,11 +27,12 @@ collections:
       - { label: '发布日期', name: 'date', widget: 'datetime' }
       - { label: '作者', name: 'authors', widget: 'list', default: ['admin'] }
       - { label: '标签', name: 'tags', widget: 'list', required: false }
-      
-      # --- 关键修改 ---
-      # 将之前的 object 类型改为最简单的 image 类型
-      # 这样可以避免因数据结构缺失导致的 "Cannot destructure property 'url'" 崩溃
-      - { label: '封面图片', name: 'image', widget: 'image', required: false }
-      # ----------------
-      
+      - label: '封面图片'
+        name: 'image'
+        widget: 'object'
+        required: false
+        collapsed: true
+        fields:
+          - { label: '选择图片', name: 'filename', widget: 'image', required: false, media_folder: '', public_folder: '' }
+          - { label: '图片说明', name: 'caption', widget: 'string', required: false }
       - { label: '内容', name: 'body', widget: 'markdown' }
