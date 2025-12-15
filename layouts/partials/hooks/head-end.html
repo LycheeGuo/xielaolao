@@ -1,30 +1,17 @@
 <style>
-    /* 隐藏 powered-by 区域 */
-    . powered-by {
-        display: none ! important;
-    }
-    
-    /* 隐藏所有指向 hugoblox 官网的链接及其父元素 */
+    /* 强制隐藏所有 Hugo Blox 归属信息 */
+    footer p: nth-child(2),
+    footer > div > p:last-child,
     footer a[href*="hugoblox"],
-    footer a[href*="wowchemy"] {
-        display:  none !important;
-        visibility: hidden !important;
-    }
-
-    /* 隐藏那个"构建您的 ->"按钮 */
-    footer a[href*="hugoblox"] + button, 
-    footer button {
-         display: none !important;
-    }
-    
-    /* 隐藏包含特定文本的段落 */
-    footer p:has(a[href*="hugoblox"]) {
+    footer a[href*="wowchemy"],
+    . powered-by,
+    [class*="powered"],
+    footer p:has(a[href*="hugoblox"]),
+    footer div:has(a[href*="hugoblox"]) {
         display: none ! important;
-    }
-
-    /* 额外：隐藏整个 powered-by 容器 */
-    footer .text-sm: has(a[href*="hugoblox"]),
-    footer div: has(> a[href*="hugoblox"]) {
-        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
     }
 </style>
