@@ -2,6 +2,8 @@
 title: 世界赠予的
 date: 2025-06-05T23:36:00.000+01:00
 view: date_title_summary
+authors:
+  - admin
 tags:
   - 微信公众号
 image:
