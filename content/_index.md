@@ -14,14 +14,15 @@ sections:
         style: 'text-align: justify;'
       # Avatar customization
       avatar:
-        size: large  # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+        size: large
+        shape: circle
   - block: collection
     content:
       filters:
         folders:
           - blog
     design:
+      view: compact  # 【新增】必须指定视图样式，否则会报错！
       spacing:
         padding: ['3rem', 0, '6rem', 0]
 ---
